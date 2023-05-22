@@ -7,3 +7,5 @@ configMapGenerator:
   - name: podinfo-config
     literals: 
       - uiColor="#96645E"
+commonLabels:
+  app: podinfo
