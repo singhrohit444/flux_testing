@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/moonswitch-workshops/yxz2m77ybv0y
+  url: ssh://git@github.com/singhrohit444/flux_testing
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
