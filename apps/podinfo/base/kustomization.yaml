@@ -4,6 +4,8 @@ resources:
   - ingress.yaml
   - deployment.yaml
   - service.yaml
+  - podinfo-policy.yaml
+  - podinfo-registry.yaml
 configMapGenerator:
   - name: podinfo-config
     literals: 
