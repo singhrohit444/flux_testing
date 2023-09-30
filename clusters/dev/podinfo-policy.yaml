@@ -20,7 +20,7 @@ spec:
   imageRepositoryRef:
     name: nginx
   filterTags:
-    pattern: '*alpine.*'
+    pattern: '*alpine*'
   policy:
     alphabetical:
       order: desc
