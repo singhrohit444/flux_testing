@@ -37,6 +37,6 @@ spec:
     pattern: 'stage*'
   policy:
     sort: custom
-    order: desc
+    #order: desc
     sortBy: python3 ../../../custom_sort_ecr.py  # Reference the custom sorting script
-  schedule: "*/5 * * * *"
+  #schedule: "*/5 * * * *"
