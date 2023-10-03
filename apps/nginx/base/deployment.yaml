@@ -18,7 +18,7 @@ spec:
         app: nginx-deploy
     spec:
       containers:
-      - image: docker.io/library/nginx:1-alpine #{"$imagepolicy": "flux-system:nginx"}
+      - image: docker.io/library/nginx:alpine3.18 #{"$imagepolicy": "flux-system:nginx"}
         name: nginx
         resources: {}
 status: {}
