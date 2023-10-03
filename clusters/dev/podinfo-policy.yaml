@@ -11,6 +11,20 @@ spec:
     semver:
       range: 6.2.x
 ---
+#apiVersion: image.toolkit.fluxcd.io/v1beta2
+#kind: ImagePolicy
+#metadata:
+#  name: nginx
+#  namespace: flux-system
+#spec:
+#  imageRepositoryRef:
+#    name: nginx
+#  filterTags:
+#    pattern: '.*alpine.*'
+#  policy:
+#    alphabetical:
+#      order: desc
+---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
@@ -20,7 +34,9 @@ spec:
   imageRepositoryRef:
     name: nginx
   filterTags:
-    pattern: '.*alpine.*'
+    pattern: 'stage*'
   policy:
-    alphabetical:
-      order: desc
+    sort: custom
+    order: desc
+    sortBy: python3 ../../../custom_sort_ecr.py  # Reference the custom sorting script
+  schedule: "*/5 * * * *"
