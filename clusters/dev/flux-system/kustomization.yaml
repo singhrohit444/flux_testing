@@ -3,3 +3,14 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+patches:
+  - patch: |
+      apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: k8s-service-account
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::307162448257:role/aws-ecr-role   
+    target:
+      kind: ServiceAccount
+      name: "(source-controller|image-reflector-controller)"

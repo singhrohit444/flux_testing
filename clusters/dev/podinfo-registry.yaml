@@ -14,6 +14,6 @@ metadata:
   name: nginx
   namespace: flux-system
 spec:
-  image: 104913232021.dkr.ecr.us-east-1.amazonaws.com/igb-rs
+  image: 307162448257.dkr.ecr.us-east-1.amazonaws.com/igb-rs
   interval: 5m0s
 ---
